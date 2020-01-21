@@ -159,8 +159,8 @@ HTSLIB_SOURCE = None
 package_list = ['pysam',
                 'pysam.include',
                 'pysam.include.samtools',
-                'pysam.include.bcftools',
-                'pysam.include.samtools.win32']
+                'pysam.include.bcftools']
+#                 'pysam.include.samtools.win32']
 package_dirs = {'pysam': 'pysam',
                 'pysam.include.samtools': 'samtools',
                 'pysam.include.bcftools': 'bcftools'}
@@ -318,8 +318,8 @@ for fn in config_headers:
 #######################################################
 # Windows compatibility - untested
 if platform.system() == 'Windows':
-    include_os = ['win32']
-    os_c_files = ['win32/getopt.c']
+    # include_os = ['win32']
+    # os_c_files = ['win32/getopt.c']
     extra_compile_args = []
 else:
     include_os = []
