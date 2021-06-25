@@ -4123,6 +4123,7 @@ cdef class VariantFile(HTSFile):
             errcode = record.errcode
             bcf_destroy1(record)
             if errcode:
+                print("#DEBUG", errcode)
                 raise IOError('unable to parse next record')
             if ret == -1:
                 raise StopIteration
